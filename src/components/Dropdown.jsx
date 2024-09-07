@@ -4,20 +4,12 @@ import { Dropdown, DropdownTrigger, DropdownMenu, DropdownItem, Button } from "@
 export default function DropdownComponent() {
     const items = [
         {
-            key: "new",
-            label: "New file",
+            key: "servicios",
+            label: "Servicios",
         },
         {
-            key: "copy",
-            label: "Copy link",
-        },
-        {
-            key: "edit",
-            label: "Edit file",
-        },
-        {
-            key: "delete",
-            label: "Delete file",
+            key: "calendary",
+            label: "Calendario",
         }
     ];
 
@@ -25,9 +17,9 @@ export default function DropdownComponent() {
         <Dropdown>
             <DropdownTrigger>
                 <Button
-                    variant="bordered"
+                    variant="faded"
                 >
-                    Services
+                    Servicios
                 </Button>
             </DropdownTrigger>
             <DropdownMenu aria-label="Dynamic Actions" items={items}>
