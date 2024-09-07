@@ -26,7 +26,7 @@ export default function DropdownComponent() {
                 <Button
                     variant="faded"
                     size="lg" // Cambia el tamaño del botón
-                    css={{ fontSize: "18px" }} // Aumenta el tamaño del texto en el botón
+                    css={{ fontSize: "20px" }} // Aumenta el tamaño del texto en el botón
                 >
                     Servicios
                 </Button>
