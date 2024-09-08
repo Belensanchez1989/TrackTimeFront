@@ -17,9 +17,9 @@ export default function ContactPage() {
         navigate('/Calendar-Page');
     };
 
-    const handleConfirmPageClick = () => {
+    const handlePreConfirmPageClick = () => {
         console.log('Redirecting to Contact-Page');
-        navigate('/Confirm-Page');
+        navigate('/PreConfirm-Page');
     };
     return (
         <>
@@ -54,9 +54,9 @@ export default function ContactPage() {
                 placeholder="Deja una nota"
                 className="max-w-xs"
             />
-            <div className="flex gap-8 items-center">
+            <div className="flex flex-wrap justify-center gap-10 mt-5">
                 <ButtonHome onClick={handleCalendarPageClick}>Volver</ButtonHome>
-                <ButtonHome onClick={handleConfirmPageClick}>Continuar</ButtonHome>
+                <ButtonHome onClick={handlePreConfirmPageClick}>Continuar</ButtonHome>
             </div>
             <FooterDivider />
         </>

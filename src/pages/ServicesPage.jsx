@@ -5,6 +5,8 @@ import FooterDivider from "../components/Footer";
 import ButtonHome from "../components/Button";
 import DividerTop from "../components/Divider";
 import { useNavigate } from "react-router-dom";
+import { Image } from "@nextui-org/react";
+import ImageHome from "../components/Image";
 
 
 
@@ -23,11 +25,14 @@ export default function ServicesPage() {
 
     return (
         <>
-            <ProgressTop value={25}/>
-            
+            <ProgressTop value={25} />
+            <ImageHome
+                width={500}
+                alt="NextUI hero Image"
+                src="../../public/assets/men and women making music in home recording studi.webp" />
             <DividerTop>Servicios</DividerTop>
             <ServicesAll />
-            <div className="flex gap-8 items-center">
+            <div className="flex flex-wrap justify-center gap-10 mt-5">
                 <ButtonHome onClick={handleHomePageClick}>Volver</ButtonHome>
                 <ButtonHome onClick={handleCalendarPageClick}>Continuar</ButtonHome>
             </div>
