@@ -25,7 +25,7 @@ export default function ServicesPage() {
         <>
             <ProgressTop value={25}/>
             
-            <DividerTop/>
+            <DividerTop>Servicios</DividerTop>
             <ServicesAll />
             <div className="flex gap-8 items-center">
                 <ButtonHome onClick={handleHomePageClick}>Volver</ButtonHome>
