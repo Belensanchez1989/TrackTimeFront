@@ -3,6 +3,7 @@ import { Navbar, NavbarMenuToggle ,Image} from "@nextui-org/react";
 import myImage from ".././public/portrait photography of a hip hop girl.webp";
 import DropdownComponent from "./components/Dropdown";
 import FooterDivider from "./components/Footer";
+import TableDay from "./components/TableDay";
 
 
 
@@ -22,6 +23,7 @@ function App() {
         alt="NextUI hero Image"
         src={myImage} />
         <DropdownComponent/>
+        <TableDay/>
         <FooterDivider/>
     </>
   )
