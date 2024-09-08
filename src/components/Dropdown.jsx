@@ -25,6 +25,7 @@ export default function DropdownComponent() {
             <DropdownTrigger>
                 <Button
                     variant="faded"
+                    color="default"
                     size="lg" // Cambia el tamaño del botón
                     css={{ fontSize: "20px" }} // Aumenta el tamaño del texto en el botón
                 >

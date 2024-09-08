@@ -4,6 +4,7 @@ import myImage from ".././public/portrait photography of a hip hop girl.webp";
 import DropdownComponent from "./components/Dropdown";
 import FooterDivider from "./components/Footer";
 import TableDay from "./components/TableDay";
+import ButtonHome from "./components/Button";
 
 
 
@@ -24,6 +25,7 @@ function App() {
         src={myImage} />
         <DropdownComponent/>
         <TableDay/>
+        <ButtonHome/>
         <FooterDivider/>
     </>
   )
