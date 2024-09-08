@@ -21,28 +21,30 @@ export default function DropdownComponent() {
 
     // Renderiza el dropdown con los servicios
     return (
-        <Dropdown>
-            <DropdownTrigger>
-                <Button
-                    variant="faded"
-                    color="default"
-                    size="lg" // Cambia el tamaño del botón
-                    css={{ fontSize: "20px" }} // Aumenta el tamaño del texto en el botón
-                >
-                    Servicios
-                </Button>
-            </DropdownTrigger>
-            <DropdownMenu aria-label="Dynamic Services" items={services}>
-                {(service) => (
-                    <DropdownItem
-                        key={service.id}
-                        className="service-item"
-                        css={{ fontSize: "16px" }} // Cambia el tamaño del texto en los items
+        <div className="flex justify-center items-center gap-4 items-center py-1">
+            <Dropdown>
+                <DropdownTrigger>
+                    <Button
+                        variant="faded"
+                        color="default"
+                        size="lg" // Cambia el tamaño del botón
+                        css={{ fontSize: "20px" }} // Aumenta el tamaño del texto en el botón
                     >
-                        {service.service_name} {/* Asume que el servicio tiene un campo "name" */}
-                    </DropdownItem>
-                )}
-            </DropdownMenu>
-        </Dropdown>
+                        Servicios
+                    </Button>
+                </DropdownTrigger>
+                <DropdownMenu aria-label="Dynamic Services" items={services}>
+                    {(service) => (
+                        <DropdownItem
+                            key={service.id}
+                            className="service-item"
+                            css={{ fontSize: "16px" }} // Cambia el tamaño del texto en los items
+                        >
+                            {service.service_name} {/* Asume que el servicio tiene un campo "name" */}
+                        </DropdownItem>
+                    )}
+                </DropdownMenu>
+            </Dropdown>
+        </div>
     );
 }

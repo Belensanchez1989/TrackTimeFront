@@ -24,12 +24,14 @@ export default function CalendarPage() {
         <>
             <ProgressTop value={45} />
             <DividerTop>Fecha y hora</DividerTop>
-            <div className="flex-col  gap-8 items-center">
-                <CalendarComponent/>
-                <DropdownHour/>
-                <div className="flex gap-8 items-center">
-                <ButtonHome onClick={handleServicesPageClick}>Volver</ButtonHome>
-                <ButtonHome onClick={handleContactPageClick}>Continuar</ButtonHome>
+            <div className="flex-col  gap-1 items-center">
+                <CalendarComponent />
+                <div className="flex flex-wrap justify-center gap-10 mt-8">
+                    <DropdownHour />
+                </div>
+                <div className="flex flex-wrap justify-center gap-10 mt-5">
+                    <ButtonHome onClick={handleServicesPageClick}>Volver</ButtonHome>
+                    <ButtonHome onClick={handleContactPageClick}>Continuar</ButtonHome>
                 </div>
             </div>
             <FooterDivider />

@@ -17,6 +17,10 @@ function Home() {
         console.log('Redirecting to Services-Page');
         navigate('/Services-Page');
     };
+    const handleReservationsPageClick = () => {
+        console.log('Redirecting to Services-Page');
+        navigate('/Reservations-Page');
+    };
 
 
     return (
@@ -33,7 +37,10 @@ function Home() {
                 src="../../public/assets/myImage.webp" />
             <DropdownComponent />
             <TableDay />
-            <ButtonHome onClick={handleServicesPageClick}>Reserva ahora</ButtonHome>
+            <div className="flex flex-wrap justify-center gap-10 mt-5">
+                <ButtonHome onClick={handleReservationsPageClick}>Mis reservas </ButtonHome>
+                <ButtonHome onClick={handleServicesPageClick}>Reserva ahora</ButtonHome>
+            </div>
             <FooterDivider />
         </>
     )
