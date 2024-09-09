@@ -15,9 +15,9 @@ export default function PreConfirmPage() {
         console.log('Redirecting to Services-Page');
         navigate('/Confirm-Page');
     };
-    const handleContactPageClick = () => {
+    const handleCalendarPageClick = () => {
         console.log('Redirecting to Contact-Page');
-        navigate('/Contact-Page');
+        navigate('/Calendar-Page');
     };
     return (
         <>
@@ -26,7 +26,7 @@ export default function PreConfirmPage() {
             <div className="flex-col  gap-8 items-center">
                 <DetailComponent/>
                 <div className="flex flex-wrap justify-center gap-10 mt-5">
-                    <ButtonHome onClick={handleContactPageClick}>Volver</ButtonHome>
+                    <ButtonHome onClick={handleCalendarPageClick}>Volver</ButtonHome>
                     <ButtonHome onClick={handleConfirmPageClick}>Confirmar</ButtonHome>
                 </div>
             </div>
