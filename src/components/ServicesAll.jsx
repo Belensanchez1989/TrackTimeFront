@@ -1,18 +1,30 @@
-import React from "react";
-import { RadioGroup, Radio } from "@nextui-org/react";
+import React from 'react';
+import { RadioGroup, Radio } from '@nextui-org/react';
+import useServices from '../hooks/useServices'; // Ajusta la ruta según tu estructura
 
 export default function ServicesAll() {
+    const { services, loading, error } = useServices();
+
+    // Manejar la selección de servicio
+    const handleSelection = (value) => {
+        localStorage.setItem('selectedService', value);
+    };
+
+    if (loading) return <p>Loading services...</p>;
+    if (error) return <p>Error fetching services: {error}</p>;
+
     return (
         <div className="flex flex-wrap justify-center gap-10 mt-5">
             <RadioGroup label="Selecciona el Servicio">
-                <Radio value="Grabación">Grabación</Radio>
-                <Radio value="Mezcla">Mezcla</Radio>
-                <Radio value="Mastering">Mastering</Radio>
-                <Radio value="Producción">Producción</Radio>
-                <Radio value="Producción integral">Producción integral</Radio>
-                <Radio value="Lockout">Lockout</Radio>
-                <Radio value="Clases de Guitarra">Clases de Guitarra</Radio>
-                <Radio value="">Clases de Canto</Radio>
+                {services.map(service => (
+                    <Radio 
+                        key={service.id} 
+                        value={service.service_name} 
+                        onChange={() => handleSelection(service.service_name)}
+                    >
+                        {service.service_name}
+                    </Radio>
+                ))}
             </RadioGroup>
         </div>
     );
