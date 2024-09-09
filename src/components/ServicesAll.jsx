@@ -1,6 +1,6 @@
 import React from 'react';
 import { RadioGroup, Radio } from '@nextui-org/react';
-import useServices from '../hooks/useServices'; // Ajusta la ruta según tu estructura
+import useServices from '../hooks/useServices'; 
 
 export default function ServicesAll() {
     const { services, loading, error } = useServices();

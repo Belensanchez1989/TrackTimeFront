@@ -13,9 +13,9 @@ import { useNavigate } from "react-router-dom";
 function Home() {
     const navigate = useNavigate();
 
-    const handleServicesPageClick = () => {
+    const handleContactPageClick = () => {
         console.log('Redirecting to Services-Page');
-        navigate('/Services-Page');
+        navigate('/Contact-Page');
     };
     const handleReservationsPageClick = () => {
         console.log('Redirecting to Services-Page');
@@ -39,7 +39,7 @@ function Home() {
             <TableDay />
             <div className="flex flex-wrap justify-center gap-10 mt-5">
                 <ButtonHome onClick={handleReservationsPageClick}>Mis reservas </ButtonHome>
-                <ButtonHome onClick={handleServicesPageClick}>Reserva ahora</ButtonHome>
+                <ButtonHome onClick={handleContactPageClick}>Reserva ahora</ButtonHome>
             </div>
             <FooterDivider />
         </>

@@ -1,6 +1,6 @@
 import React from "react";
-import { BrowserRouter as Router, Routes, Route,useNavigate } from "react-router-dom";
-import Home from "./pages/Home"; // Importamos Home desde la carpeta pages
+import { BrowserRouter as Router, Routes, Route, useNavigate } from "react-router-dom";
+import Home from "./pages/Home";
 import ServicesPage from "./pages/ServicesPage";
 import CalendarPage from "./pages/CalendarPage";
 import ContactPage from "./pages/ContactPage";
@@ -13,7 +13,7 @@ import ReservationsPage from "./pages/ReservationsPage";
 
 function App() {
 
-  
+
 
   return (
     <Router>
@@ -26,7 +26,6 @@ function App() {
         <Route path="/PreConfirm-Page" element={<PreConfirmPage />} />
         <Route path="/Confirm-Page" element={<ConfirmPage />} />
         <Route path="/Reservations-Page" element={<ReservationsPage />} />
-        {/* Aquí podrás añadir más rutas en el futuro */}
       </Routes>
     </Router>
   );
