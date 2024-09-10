@@ -7,6 +7,8 @@ import DividerTop from "../components/Divider";
 import { useNavigate } from "react-router-dom";
 import useApi from "../services/useApi";
 import { CALENDARY } from "../config/urls";
+import InputHour from "../components/InputHour";
+
 
 export default function CalendarPage() {
     const navigate = useNavigate();
@@ -49,8 +51,13 @@ export default function CalendarPage() {
             <DividerTop>Selecciona la fecha</DividerTop>
             <CalendarComponent onDateSelect={handleDateSelect} />
             <div className="flex flex-wrap justify-center gap-10 mt-5">
-                <ButtonHome onClick={handleConfirmDate}>Confirmar Fecha</ButtonHome>
+                <ButtonHome onClick={handleConfirmDate}>Confirmar Fecha</ButtonHome>   
             </div>
+            <InputHour/>
+            <div className="flex flex-wrap justify-center gap-10 mt-5">
+                <ButtonHome onClick={handleConfirmDate}>Confirmar Fecha</ButtonHome>   
+            </div>
+
             <FooterDivider />
         </>
     );
