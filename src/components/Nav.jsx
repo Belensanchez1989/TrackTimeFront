@@ -17,8 +17,6 @@ export default function NavComponent() {
                     <p className="font-bold text-black">ACME</p>
                 </NavbarBrand>
             </NavbarContent>
-
-            {/* Menú con los dos elementos "Calendario" y "Servicios" */}
             <NavbarContent className="hidden sm:flex gap-4" justify="center">
                 <NavbarItem>
                     <Link style={{ color: 'black' }} href="#">

@@ -1,28 +1,32 @@
 import React from "react";
-import { Navbar, NavbarMenuToggle ,Image} from "@nextui-org/react";
-import myImage from ".././public/portrait photography of a hip hop girl.webp";
-import DropdownComponent from "./components/Dropdown";
+import { BrowserRouter as Router, Routes, Route, useNavigate } from "react-router-dom";
+import Home from "./pages/Home";
+import CalendarPage from "./pages/CalendarPage";
+import ContactPage from "./pages/ContactPage";
+import PreConfirmPage from "./pages/PreConfirmPage";
+import ConfirmPage from "./pages/ConfirmPage";
+import ReservationsPage from "./pages/ReservationsPage";
+
 
 
 
 function App() {
 
 
+
   return (
-    <>
-      <Navbar>
-        <NavbarMenuToggle />
-        <h1 className="text-3xl font-bold underline">
-          Track-Time!
-        </h1>
-      </Navbar>
-      <Image
-        width={500}
-        alt="NextUI hero Image"
-        src={myImage} />
-        <DropdownComponent/>
-    </>
-  )
+    <Router>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/Home" element={<Home />} />
+        <Route path="/Calendar-Page" element={<CalendarPage />} />
+        <Route path="/Contact-Page" element={<ContactPage />} />
+        <Route path="/PreConfirm-Page" element={<PreConfirmPage />} />
+        <Route path="/Confirm-Page" element={<ConfirmPage />} />
+        <Route path="/Reservations-Page" element={<ReservationsPage />} />
+      </Routes>
+    </Router>
+  );
 }
 
 export default App;

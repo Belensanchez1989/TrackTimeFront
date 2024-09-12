@@ -1,8 +1,8 @@
 import React from "react";
 import { Image } from "@nextui-org/react";
-import myImage from "../../public/portrait photography of a hip hop girl.webp";
+import myImage from "../../public/assets/myImage.webp";
 
-export default function ImageHome() {
+export default function ImageHome({children}) {
     return (
         <Image
             width={500}
