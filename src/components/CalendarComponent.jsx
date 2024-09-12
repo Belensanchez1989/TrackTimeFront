@@ -6,8 +6,9 @@ export default function CalendarComponent({ onDateSelect }) {
     const [selectedDate, setSelectedDate] = useState(today(getLocalTimeZone()));
 
     const handleDateChange = (date) => {
+        const formattedDate = `${date.year}-${String(date.month).padStart(2, '0')}-${String(date.day).padStart(2, '0')}`; // Convertir a cadena YYYY-MM-DD
         setSelectedDate(date); // Actualiza la fecha seleccionada
-        onDateSelect(date); // Notifica a CalendarPage sobre la nueva selección
+        onDateSelect(formattedDate); // Pasar la fecha en formato de cadena
     };
 
     return (

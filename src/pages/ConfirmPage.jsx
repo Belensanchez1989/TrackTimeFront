@@ -2,9 +2,7 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import ButtonHome from "../components/Button";
 import ProgressTop from "../components/Progress";
-import FooterDivider from "../components/Footer";
 import DividerTop from "../components/Divider";
-import DetailComponent from "../components/DetailComponent";
 
 
 
@@ -25,7 +23,6 @@ export default function PreConfirmPage() {
                     <ButtonHome onClick={handleHomePageClick}>Realizar otra reserva</ButtonHome>
                 </div>
             </div>
-            <FooterDivider />
         </>
     );
 }

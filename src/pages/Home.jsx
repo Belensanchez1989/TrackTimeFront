@@ -1,7 +1,6 @@
 import React from "react";
 import { Navbar, NavbarMenuToggle } from "@nextui-org/react";
 import DropdownComponent from "../components/Dropdown";
-import FooterDivider from "../components/Footer";
 import TableDay from "../components/TableDay";
 import ButtonHome from "../components/Button";
 import ImageHome from "../components/Image";
@@ -41,7 +40,6 @@ function Home() {
                 <ButtonHome onClick={handleReservationsPageClick}>Mis reservas </ButtonHome>
                 <ButtonHome onClick={handleContactPageClick}>Reserva ahora</ButtonHome>
             </div>
-            <FooterDivider />
         </>
     )
 }
