@@ -1,7 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import ButtonHome from "../components/Button";
-import FooterDivider from "../components/Footer";
 import DividerTop from "../components/Divider";
 import ReservationComponent from "../components/ReservationComponent";
 
@@ -24,7 +23,6 @@ export default function ReservationsPage() {
                     <ButtonHome onClick={handleHomePageClick}>Consulta tus reservas</ButtonHome>
                 </div>
             </div>
-            <FooterDivider />
         </>
     );
 }
